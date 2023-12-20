@@ -2,13 +2,22 @@
 <html lang="en">
 
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
+
     <style>
+        p {
+            font-family: 'Handlee', cursive;
+            color: red;
+            font-size: 32px;
+        }
     </style>
 </head>
 
 <body>
     <h1>The magic 8 ball</h1>
-    <input /><br />
+    <input placeholder="Ask me anything"/><br />
     <x-magic />
     <script>
         class Magic8Ball extends HTMLElement{
@@ -17,6 +26,7 @@
 `
     <button id="question">Ask</button>
     <p id="answer"></p>
+    
 `
                 this.button = document.querySelector("#question");
                 this.button.addEventListener("click", ()=>{
